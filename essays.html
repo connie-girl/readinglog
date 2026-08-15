@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>READING LOG</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-color: #ffffff;
+            --card-bg: #FFFFFF;
+            --text-dark: #2B2927;
+            --text-muted: #7A7570;
+            --border-color: #EAE3D9;
+        }
+
+        body {
+            font-family: 'Geist Pixel', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        header h1 {
+            font-family: 'Geist Pixel', sans-serif;
+            font-size: 2.4rem;
+            margin-bottom: 6px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Navigation Buttons Container */
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            font-family: 'Geist Pixel', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--text-dark);
+        }
+
+        /* Active Page Button Highlight */
+        .nav-btn.active {
+            background-color: var(--text-dark);
+            color: #ffffff;
+            border-color: var(--text-dark);
+        }    
+
+        /* Clean List Container */
+        .book-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            
+        }
+
+        /* Row Layout for each Book */
+        .book-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .book-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-title {
+            font-family: 'Geist Pixel', sans-serif;
+            font-size: 1.0rem;
+            font-weight: 600;
+        }
+
+        .book-author {
+            font-size: 1.0rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            
+        }
+color: var(--text-muted);
+        /* Minimal Status Badges */
+        .status {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .status.reading {
+            background-color: #FCECE9;
+            color: #9C4B3C;
+        }
+
+        .status.completed {
+            background-color: #E8F0E6;
+            color: #3B5238;
+        }
+
+        .status.want-to-read {
+            background-color: #EBF3F5;
+            color: #2D5D68;
+        }
+
+        @media (max-width: 480px) {
+            .book-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1> / READING LOG /</h1>
+
+        <div class="container">
+        
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-btn active">Prose</a>
+                <a href="poetry.html" class="nav-btn">Poetry</a>
+                <a href="essays.html" class="nav-btn">Essays</a>
+            </nav>
+
+           </header>    
+
+        <main>
+            <ul class="book-list">
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">The Book of Laughter and Forgetting</span>
+                        <span class="book-author">Milan Kundera</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">Ten Nights of Dreams</span>
+                        <span class="book-author">Natsume Sōseki</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">The White Book</span>
+                        <span class="book-author">Han Kang</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">Difficult Loves</span>
+                        <span class="book-author">Italo Calvino</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">The End of the Affair</span>
+                        <span class="book-author">Graham Greene</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">Do Androids Dream of Electric Sheep?</span>
+                        <span class="book-author">Philip K. Dick</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">Orlando</span>
+                        <span class="book-author">Virginia Woolf</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">Beloved</span>
+                        <span class="book-author">Toni Morrison</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">The Red and the Black</span>
+                        <span class="book-author">Stendhal</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">Book of Promethea</span>
+                        <span class="book-author">Hélène Cixous</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">The Passion According to G.H.</span>
+                        <span class="book-author">Clarice Lispector</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">Germinal</span>
+                        <span class="book-author">Émile Zola</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">Sérotonine</span>
+                        <span class="book-author">Michel Houellebecq</span>
+                    </div>
+                    <span class="status reading">READING</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">Disgrace</span>
+                        <span class="book-author">J.M. Coetzee</span>
+                    </div>
+                    <span class="status completed">COMPLETE</span>
+                </li>
+
+                <li class="book-item">
+                    <div class="book-info">
+                        <span class="book-title">Rings of Saturn</span>
+                        <span class="book-author">W.G. Sebald</span>
+                    </div>
+                    <span class="status reading">READING</span>
+                </li>
+
+            </ul>
+        </main>
+
+    </div>
+
+</body>
+</html>
